@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # NekoLang - tiny interpreted language with UI, HTTP, imports and meow pkg manager
 
-import re, math, subprocess, sys, os, io, json, pathlib, random
+import re, math, subprocess, sys, os, io, pathlib, random
 import tkinter as tk
 from typing import List
 from functools import partial
