@@ -9,6 +9,8 @@ try:
     import requests
 except ImportError:
     requests = None  # net & meow will error with clear message
+import time
+
 
 # ----------------------------- Config -----------------------------
 REGISTRY_URL = "https://raw.githubusercontent.com/comet-CS/nekolang-reg/refs/heads/main/packages.txt"
@@ -391,6 +393,7 @@ class Interpreter:
         })
         # simple math shorthands
         self.globals.set("pi", math.pi)
+        self.globals.set("now_ms", lambda: int(time.time() * 1000))
 
     # ---------- UI ----------
     def _ensure_root(self):
